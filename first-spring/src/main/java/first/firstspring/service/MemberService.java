@@ -3,13 +3,17 @@ package first.firstspring.service;
 import first.firstspring.domain.Member;
 import first.firstspring.repository.MemberRepository;
 import first.firstspring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 public class MemberService { // command + shift  + t
 
     private final MemberRepository memberRepository ;
+
 
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
