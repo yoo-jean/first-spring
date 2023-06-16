@@ -1,6 +1,9 @@
 package first.firstspring.domain;
 
+import javax.persistence.*;
+
 public class Member {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     public Long getId() {
@@ -9,6 +12,7 @@ public class Member {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
